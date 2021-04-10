@@ -24,3 +24,4 @@ var userr = {
 var pageName = "1";
 var errorMessage = null;
 var popularTags = ["dragon", "coffee"];
+var dragonsTage = "dragon";

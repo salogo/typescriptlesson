@@ -54,5 +54,11 @@ const popularTags: PopularTag[] = ["dragon", "coffee"] ;
          name: string
      }
 
+// 7-Unions + type alliases, how to combine them:
+type PPopularTag = string;
+type MaybePopularTag = PPopularTag | null;
+
+const dragonsTage: MaybePopularTag =  "dragon";
+
 
 
