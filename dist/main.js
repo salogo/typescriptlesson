@@ -9,7 +9,7 @@ var getFullName = function (name, surname) {
     return name + " " + surname;
 };
 console.log(getFullName("great", "lessons"));
-// 3 The object in typeScript:
+// 3- The object in typeScript:
 var user = {
     name: "Jhon",
     age: 70
@@ -20,3 +20,7 @@ var user2 = {
 var userr = {
     name: "u"
 };
+// 5-Union operator to combine data types:
+var pageName = "1";
+var errorMessage = null;
+var popularTags = ["dragon", "coffee"];

@@ -13,7 +13,7 @@ const getFullName = (name:string, surname:string): string => {
 };
 console.log(getFullName("great", "lessons"));
 
-// 3 The object in typeScript:
+// 3- The object in typeScript:
 const user:{name:string, age:number} = {
     name: "Jhon",
     age: 70  
@@ -24,7 +24,7 @@ const user2:{name:string, age:number} = {
     //missing age here
 }
 
-// How to create Interface, using entities inside of interface:
+// 4-How to create Interface, using entities inside of interface:
 interface Userr {
     name:string,
     age?:number,
@@ -36,5 +36,23 @@ interface Userr {
 const userr:Userr = {
     name: "u"
 }
+
+// 5-Union operator to combine data types:
+let pageName:string | number = "1";
+let errorMessage: string | null = null;
+// =null is the default value, if we don't specify the value will be undefine
+
+
+// 6-Type Alliases in typeScript:
+// we can create alliases and use them everywhere:
+type ID = string;
+type PopularTag = string;
+const popularTags: PopularTag[] = ["dragon", "coffee"] ;
+     // or inside the interface:
+     interface Userinterface {
+         id: ID;
+         name: string
+     }
+
 
 
