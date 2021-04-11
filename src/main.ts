@@ -61,4 +61,18 @@ type MaybePopularTag = PPopularTag | null;
 const dragonsTage: MaybePopularTag =  "dragon";
 
 
+// 8-Void in typeScript:
+// is set of undefined and null, mean we don't return anything
+
+const doSomthing = ():void => {
+    console.log("doSomething")
+};
+
+
+// any in typeScript:
+// its not recomanded because it dosen't show you any error
+
+let foo: any = "foo"; 
+console.log(foo.bar());
+//we don't get error even foo dosen't have function called bar()
 
