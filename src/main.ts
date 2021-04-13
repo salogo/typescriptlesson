@@ -76,3 +76,11 @@ let foo: any = "foo";
 console.log(foo.bar());
 //we don't get error even foo dosen't have function called bar()
 
+// 9-never in typeScript:
+
+const donotdosomthing =(): never => {
+  throw "never";
+}
+// a function returning never cannot have a reachable end point.
+// if we take out the second line = throw "never" or return it will show a error
+

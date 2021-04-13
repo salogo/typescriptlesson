@@ -25,3 +25,19 @@ var pageName = "1";
 var errorMessage = null;
 var popularTags = ["dragon", "coffee"];
 var dragonsTage = "dragon";
+// 8-Void in typeScript:
+// is set of undefined and null, mean we don't return anything
+var doSomthing = function () {
+    console.log("doSomething");
+};
+// any in typeScript:
+// its not recomanded because it dosen't show you any error
+var foo = "foo";
+console.log(foo.bar());
+//we don't get error even foo dosen't have function called bar()
+// 9-never in typeScript:
+var donotdosomthing = function () {
+    throw "never";
+};
+// a function returning never cannot have a reachable end point.
+// if we take out the second line = throw "never" or return it will show a error
