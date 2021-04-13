@@ -41,3 +41,8 @@ var donotdosomthing = function () {
 };
 // a function returning never cannot have a reachable end point.
 // if we take out the second line = throw "never" or return it will show a error
+var vUnknown = 10;
+var s1 = vUnknown; // it will show error because type unknown is not assignable 
+// to type strung
+// but we can use "as" operator to make type assertion = to convert to another type
+var s2 = vUnknown;
