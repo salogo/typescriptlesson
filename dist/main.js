@@ -41,8 +41,26 @@ var donotdosomthing = function () {
 };
 // a function returning never cannot have a reachable end point.
 // if we take out the second line = throw "never" or return it will show a error
+// 10-unknown
 var vUnknown = 10;
 var s1 = vUnknown; // it will show error because type unknown is not assignable 
 // to type strung
 // but we can use "as" operator to make type assertion = to convert to another type
 var s2 = vUnknown;
+// the next example we convert first to unknown then to number;
+var pageNumber = "1";
+var numericPageNumber = pageNumber;
+// 11-working with DOM:
+var someElement = document.querySelector(".foo");
+console.log("someElement", someElement.value);
+// if we don't type as HTMLInputElement it will show that Property "value"
+// doses not exist
+// 12-Adding event listener:
+var SomeElement = document.querySelector("foo");
+SomeElement.addEventListener("blur", function (event) {
+    var target = event.target;
+    console.log("event", target.value);
+    // IT is just telling DOM what type we have
+    // if we don't type the second line it will show error:
+    // console.log("event", event.target.value)
+});

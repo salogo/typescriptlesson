@@ -85,8 +85,31 @@ const donotdosomthing =(): never => {
 // if we take out the second line = throw "never" or return it will show a error
 
 
+// 10-unknown
 let vUnknown: unknown = 10;
 let s1: string = vUnknown // it will show error because type unknown is not assignable 
                        // to type strung
 // but we can use "as" operator to make type assertion = to convert to another type
 let s2: string = vUnknown as string  ;                  
+
+// the next example we convert first to unknown then to number;
+let pageNumber: string = "1";
+let numericPageNumber: number =(pageNumber as unknown) as number;
+
+// 11-working with DOM:
+const someElement = document.querySelector(".foo") as HTMLInputElement;
+console.log("someElement", someElement.value);
+// if we don't type as HTMLInputElement it will show that Property "value"
+// doses not exist
+
+
+// 12-Adding event listener:
+const SomeElement = document.querySelector("foo");
+
+SomeElement.addEventListener("blur", (event) => {
+    const target = event.target as HTMLInputElement;
+    console.log("event", target.value)
+    // IT is just telling DOM what type we have
+    // if we don't type the second line it will show error:
+    // console.log("event", event.target.value)
+});
