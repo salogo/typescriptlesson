@@ -8,6 +8,7 @@
 # 5- tsc -w to watch...
 # 6- tsc config.json or jsconfig.json for configuration
 # 7- configuration file name should tsconfig.json
+
      with object:
      {
          "compilerOption" : {
