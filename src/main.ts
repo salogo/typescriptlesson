@@ -113,3 +113,24 @@ SomeElement.addEventListener("blur", (event) => {
     // if we don't type the second line it will show error:
     // console.log("event", event.target.value)
 });
+
+// 13-class in typeScript:
+class User {
+    firstName: string;
+    lastName : string;
+
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    getFullname(): string {
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+const user3 = new User(true, "lessons");
+// if we  type boolean in the argument it will show a error that true is not assignable 
+// to parameter of type "string"
+// we can use: private, public, protected
+// if we type: private firstNane: string;
+// that mean firstName will not be accessible outside our class 
