@@ -15,7 +15,6 @@
  #
  7- configuration file name should tsconfig.json
  #
-
      with object:
      {
          "compilerOption" : {
