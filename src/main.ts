@@ -134,3 +134,31 @@ const user3 = new User(true, "lessons");
 // we can use: private, public, protected
 // if we type: private firstNane: string;
 // that mean firstName will not be accessible outside our class 
+
+// 14- Implementing interfaces and readonly:
+interface Userinterface {
+    getFullname(): string;
+}
+
+class UUser implements Userinterface {
+    firstName: string;
+    readonly unchangableName: string;
+
+    constructor(firstName: string) {
+        this.firstName = firstName;
+        this.unchangableName = firstName;
+    }
+
+    changeUnchangableName(): void {
+        this.unchangableName = "foo"
+        //it show error because its read only
+    }
+    /*
+    getFullname(): string {
+        return "full name"
+    }
+    */
+   //it show error if we don't include getFullname() function
+}
+
+
