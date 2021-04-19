@@ -161,4 +161,24 @@ class UUser implements Userinterface {
    //it show error if we don't include getFullname() function
 }
 
+// 15 Inheritance:
+class Admin extends UUser {
+
+}
+const admin = new Admin("foo");
+console.log(admin.firstName)
+
+// 16-Generics :
+const addId = (obj) => {
+    let id = Math.random().toString(16);
+    return {
+        ...obj,
+        id
+    };
+};
+const uUser = {
+    name: "Jack",
+};
+const result = addId(uUser);
+console.log("result", result)
 
