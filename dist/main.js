@@ -130,7 +130,14 @@ var addId = function (obj) {
     return __assign(__assign({}, obj), { id: id });
 };
 var uUser = {
-    name: "Jack"
+    name: "Jack",
+    data: {
+        meta: "foo"
+    }
+};
+var uUser2 = {
+    name: "John",
+    data: ["foo", "bar", "baz"]
 };
 var result = addId(uUser);
 console.log("result", result);

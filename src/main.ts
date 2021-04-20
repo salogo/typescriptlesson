@@ -169,17 +169,29 @@ const admin = new Admin("foo");
 console.log(admin.firstName)
 
 // 16-Generics :
-const addId = <T> (obj: T) => {
+const addId = <T extends object> (obj: T) => {
     // <T> (obj: T) this is for Generic
     let id = Math.random().toString(16);
     return {
         ...obj,
-        id
+        id,
     };
 };
-const uUser = {
+interface Useinterface<T> {
+    name: string;
+    data: T;   
+}
+const uUser : Useinterface<{meta: string}> = {
     name: "Jack",
+    data: {
+        meta: "foo",
+    },
 };
+const uUser2: Useinterface<string[]> = {
+    name: "John",
+    data: ["foo", "bar", "baz"],
+}
+
 const result = addId(uUser);
-console.log("result", result)
+console.log("result", result);
 
