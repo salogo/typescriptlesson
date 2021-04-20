@@ -169,7 +169,8 @@ const admin = new Admin("foo");
 console.log(admin.firstName)
 
 // 16-Generics :
-const addId = (obj) => {
+const addId = <T> (obj: T) => {
+    // <T> (obj: T) this is for Generic
     let id = Math.random().toString(16);
     return {
         ...obj,

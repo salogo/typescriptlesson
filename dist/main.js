@@ -125,6 +125,7 @@ var admin = new Admin("foo");
 console.log(admin.firstName);
 // 16-Generics :
 var addId = function (obj) {
+    // <T> (obj: T) this is for Generic
     var id = Math.random().toString(16);
     return __assign(__assign({}, obj), { id: id });
 };
